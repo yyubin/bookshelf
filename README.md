@@ -7,13 +7,11 @@
 * Svelte 4 + Vite
 * (정적) 배포: Vercel
 
+## Site
 
-## Screenshot
+> https://bookshelf-indol.vercel.app
 
-> (추가 예정)
-
-
-## 📫 Contact
+## Contact
 
 * GitHub: [https://github.com/yyubin](https://github.com/yyubin)
 * Brunch: [https://brunch.co.kr/@yyubin](https://brunch.co.kr/@yyubin)
