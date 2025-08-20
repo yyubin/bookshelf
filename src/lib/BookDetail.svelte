@@ -11,28 +11,30 @@
 
 <div class="mx-auto max-w-5xl">
   <button
-    class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-800"
+    class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-indigo-700 hover:text-indigo-900 transition"
     on:click={goBack}
     type="button"
   >
-    <svg width="16" height="16" viewBox="0 0 24 24">
-      <path d="M19 12H5m7-7l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
     </svg>
     뒤로가기
   </button>
 
-  <div class="bg-white rounded-2xl ring-1 ring-slate-200 overflow-hidden">
-    <div class="grid md:grid-cols-2">
+  <div class="bg-white rounded-2xl ring-1 ring-gray-200 overflow-hidden shadow-lg">
+    <div class="grid md:grid-cols-[2fr_3fr] lg:grid-cols-2 gap-4">
       <div class="relative">
-        <img src={book.image} alt={book.title} class="h-full w-full object-cover max-h-[520px]" />
+        <img src={book.image} alt={book.title} class="h-full w-full object-cover rounded-l-2xl" />
         <div class="absolute top-4 left-4">
           <StatusBadge status={book.status} />
         </div>
       </div>
 
-      <div class="p-6 sm:p-8 space-y-4">
-        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">{book.title}</h1>
-        <p class="text-slate-600">{book.author}</p>
+      <div class="p-6 sm:p-8 space-y-5 flex flex-col">
+        <div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{book.title}</h1>
+            <p class="mt-1 text-base text-gray-600 font-medium">{book.author}</p>
+        </div>
         <StarRating value={book.rating ?? 0} />
 
         <div class="flex flex-wrap gap-2">
@@ -41,45 +43,44 @@
           {/each}
         </div>
 
-        <div class="space-y-3 pt-3 border-t border-slate-100">
+        <div class="space-y-4 pt-4 border-t border-gray-100 flex-1">
           <div>
-            <h2 class="text-base font-semibold text-slate-900/90">감상평</h2>
+            <h2 class="text-base font-semibold text-gray-900">감상평</h2>
             {#if book.review?.trim()?.length}
-              <p class="text-slate-700 leading-relaxed">{book.review}</p>
+              <p class="mt-1 text-gray-700 leading-relaxed">{book.review}</p>
             {:else}
-              <p class="italic text-slate-500">아직 감상평이 없습니다.</p>
+              <p class="mt-1 italic text-gray-500">아직 감상평이 없습니다.</p>
             {/if}
           </div>
 
           <div>
-            <h2 class="text-base font-semibold text-slate-900/90">선정 이유</h2>
-            <p class="text-slate-700 leading-relaxed">{book.reason}</p>
+            <h2 class="text-base font-semibold text-gray-900">선정 이유</h2>
+            <p class="mt-1 text-gray-700 leading-relaxed">{book.reason}</p>
           </div>
 
           <div>
-            <h2 class="text-base font-semibold text-slate-900/90">날짜</h2>
-            <p class="text-slate-700 leading-relaxed">{book.date}</p>
+            <h2 class="text-base font-semibold text-gray-900">날짜</h2>
+            <p class="mt-1 text-gray-700 leading-relaxed">{book.date}</p>
           </div>
-
-          {#if book.reviewLink}
-            <div class="pt-3 border-t border-slate-100">
-                <h2 class="text-base font-semibold text-slate-900/90">추가 서평</h2>
+        </div>
+        
+        {#if book.reviewLink}
+            <div class="pt-4 border-t border-gray-100">
                 <a
-                class="mt-2 inline-flex items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-800
-                        underline underline-offset-4 decoration-blue-300"
+                class="inline-flex items-center gap-2 text-sm font-medium text-indigo-700 hover:text-indigo-900 transition
+                        underline underline-offset-4 decoration-indigo-300"
                 href={book.reviewLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 >
                 {book.reviewSite || '외부 링크로 보기'}
-                <svg width="16" height="16" viewBox="0 0 24 24">
-                    <path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17L17 7M9 7h8v8" />
                 </svg>
                 </a>
             </div>
-            {/if}
+        {/if}
 
-        </div>
       </div>
     </div>
   </div>
