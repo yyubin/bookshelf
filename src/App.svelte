@@ -4,6 +4,7 @@
   import Topbar from './lib/Topbar.svelte';
   import BookList from './lib/BookList.svelte';
   import BookDetail from './lib/BookDetail.svelte';
+  import ReadingGarden from './lib/ReadingGarden.svelte';
   import About from './About.svelte';
   import { onMount } from 'svelte';
 
@@ -124,6 +125,8 @@
         <BookDetail book={selectedBook} />
       {:else if currentView === 'about'}
         <About />
+      {:else if currentView === 'readingGarden'}
+        <ReadingGarden />
       {/if}
     </main>
   </div>

@@ -46,7 +46,7 @@
 </header>
 
 {#if isDropdownOpen}
-  <div class="sm:hidden absolute top-14 left-0 right-0 bg-gray-800 text-gray-200 p-6 z-10 shadow-lg">
+  <div class="sm:hidden absolute sticky top-14 left-0 right-0 bg-gray-800 text-gray-200 p-6 z-10 shadow-lg">
     <div class="space-y-2 mb-6">
       <button
         class="w-full flex items-center justify-between px-4 py-2 rounded-lg transition-colors duration-200
