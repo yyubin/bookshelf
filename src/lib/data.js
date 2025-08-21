@@ -345,7 +345,7 @@ export const books = [
   },
   {
     id: 34,
-    title: '로버트 나이스트롬의 인터프리트 in Java, C',
+    title: '로버트 나이스트롬의 인터프리터 in Java, C',
     date: '2025-08-21',
     status: 'reading',
     author: '로버트 나이스트롬',
