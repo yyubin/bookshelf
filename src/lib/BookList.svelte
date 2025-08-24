@@ -14,7 +14,7 @@
 
   $: filteredAndSortedBooks = books
     .filter(book => {
-      if (filterStatus === 'all') {
+      if (filterStatus === 'all' && book.access === "public") {
         return true;
       }
       return book.status === filterStatus;
@@ -100,52 +100,54 @@
   {#if filteredAndSortedBooks.length > 0}
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 px-4 sm:px-6 lg:px-8">
       {#each filteredAndSortedBooks as book (book.id)}
-        <article
-          role="button"
-          tabindex="0"
-          on:click={() => goDetail(book.id)}
-          on:keydown={(e)=> (e.key==='Enter' || e.key===' ') && goDetail(book.id)}
-          class="group bg-white rounded-lg ring-1 ring-gray-200 overflow-hidden hover:shadow-md transition cursor-pointer"
-        >
-          <div class="relative aspect-w-2 aspect-h-3">
-            <img src={book.image} alt={book.title} class="object-cover transition-transform duration-200 group-hover:scale-105" loading="lazy" />
-            <div class="absolute top-2 left-2">
-              <StatusBadge status={book.status} />
-            </div>
-          </div>
-
-          <div class="p-4 space-y-2">
-            <h3 class="text-lg font-semibold text-gray-900 line-clamp-2">{book.title}</h3>
-            <p class="text-sm text-gray-600 line-clamp-1">{book.author}</p>
-            <div class="flex items-center justify-between">
-              <StarRating value={book.rating ?? 0} />
+        {#if book.access == "public"}
+          <article
+            role="button"
+            tabindex="0"
+            on:click={() => goDetail(book.id)}
+            on:keydown={(e)=> (e.key==='Enter' || e.key===' ') && goDetail(book.id)}
+            class="group bg-white rounded-lg ring-1 ring-gray-200 overflow-hidden hover:shadow-md transition cursor-pointer"
+          >
+            <div class="relative aspect-w-2 aspect-h-3">
+              <img src={book.image} alt={book.title} class="object-cover transition-transform duration-200 group-hover:scale-105" loading="lazy" />
+              <div class="absolute top-2 left-2">
+                <StatusBadge status={book.status} />
+              </div>
             </div>
 
-            <div class="flex flex-wrap gap-1 pt-1">
-              {#each book.tags ?? [] as t}
-                <TagBadge label={t} />
-              {/each}
-            </div>
+            <div class="p-4 space-y-2">
+              <h3 class="text-lg font-semibold text-gray-900 line-clamp-2">{book.title}</h3>
+              <p class="text-sm text-gray-600 line-clamp-1">{book.author}</p>
+              <div class="flex items-center justify-between">
+                <StarRating value={book.rating ?? 0} />
+              </div>
 
-            <div class="pt-2 border-t border-gray-100">
-              <h4 class="text-sm font-semibold text-gray-900/90 mt-2">감상평</h4>
-              {#if book.review?.trim()?.length}
-                <p class="text-sm text-gray-700 line-clamp-2">{book.review}</p>
-              {:else}
-                <p class="text-sm italic text-gray-500">아직 감상평이 없어요.</p>
-              {/if}
-            </div>
+              <div class="flex flex-wrap gap-1 pt-1">
+                {#each book.tags ?? [] as t}
+                  <TagBadge label={t} />
+                {/each}
+              </div>
 
-            <div class="mt-2">
-              <span class="inline-flex items-center gap-1 text-sm font-medium text-indigo-700 hover:text-indigo-900 transition">
-                자세히 보기
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M13 5l7 7-7 7"/>
-                </svg>
-              </span>
+              <div class="pt-2 border-t border-gray-100">
+                <h4 class="text-sm font-semibold text-gray-900/90 mt-2">감상평</h4>
+                {#if book.review?.trim()?.length}
+                  <p class="text-sm text-gray-700 line-clamp-2">{book.review}</p>
+                {:else}
+                  <p class="text-sm italic text-gray-500">아직 감상평이 없어요.</p>
+                {/if}
+              </div>
+
+              <div class="mt-2">
+                <span class="inline-flex items-center gap-1 text-sm font-medium text-indigo-700 hover:text-indigo-900 transition">
+                  자세히 보기
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        {/if}
       {/each}
     </div>
   {:else}

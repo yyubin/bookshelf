@@ -1,6 +1,7 @@
 export const books = [
   {
     id: 1,
+    access: "public",
     title: '안나 카레니나',
     author: '레프 톨스토이',
     status: 'read',
@@ -15,6 +16,7 @@ export const books = [
   },
   {
     id: 2,
+    access: "public",
     title: '알베르 카뮈',
     author: '이방인',
     status: 'read',
@@ -29,6 +31,7 @@ export const books = [
   },
   {
     id: 3,
+    access: "public",
     title: '변신',
     author: '프란츠 카프카',
     status: 'read',
@@ -43,6 +46,7 @@ export const books = [
   },
   {
     id: 4,
+    access: "public",
     title: '오만과 편견',
     author: '제인 오스틴',
     status: 'read',
@@ -66,6 +70,7 @@ export const books = [
   },
   {
     id: 6,
+    access: "public",
     title: '동물농장',
     author: '조지 오웰',
     status: 'read',
@@ -78,6 +83,7 @@ export const books = [
   },
   {
     id: 7,
+    access: "public",
     title: '자유론',
     author: '존 스튜어트 밀',
     status: 'read',
@@ -110,6 +116,7 @@ export const books = [
   },
   {
     id: 11,
+    access: "public",
     title: '명상록',
     author: '마르쿠스 아우렐리우스',
     status: 'read',
@@ -122,6 +129,7 @@ export const books = [
   },
   {
     id: 13,
+    access: "public",
     title: '데미안',
     author: '헤르만 헤세',
     status: 'read',
@@ -134,6 +142,7 @@ export const books = [
   },
   {
     id: 14,
+    access: "public",
     title: '인간 실격',
     author: '다자이 오사무',
     status: 'read',
@@ -156,6 +165,7 @@ export const books = [
   },
   {
     id: 16,
+    access: "public",
     title: '달과 6펜스',
     author: '서머싯 몸',
     status: 'read',
@@ -170,6 +180,7 @@ export const books = [
   },
   {
     id: 17,
+    access: "public",
     title: '여름',
     author: '이디스 워튼',
     status: 'read',
@@ -195,6 +206,7 @@ export const books = [
   },
   {
     id: 19,
+    access: "public",
     title: '마흔에 읽는 쇼펜하우어',
     author: '강용수',
     status: 'read',
@@ -207,6 +219,7 @@ export const books = [
   },
   {
     id: 20,
+    access: "public",
     title: '차라투스트라는 이렇게 말했다',
     author: '프리드리히 니체',
     status: 'read',
@@ -221,6 +234,7 @@ export const books = [
   },
   {
     id: 21,
+    access: "public",
     title: '구조주의와 그 이후',
     status: 'read',
     rating: 5, 
@@ -229,10 +243,11 @@ export const books = [
     reason: '후기 구조주의-해체주의를 기반으로한 포스트 모더니즘 사상으로 넘어가기 전에, 그 기저가되는 구조주의를 이해하기 위해 읽어보는 중',
     image: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788952206473.jpg',
     date: '2025-08-23',
-    review: "최초의 구조주의는 소쉬르의 언어론에서 시작한다고 볼 수 있겠다. 구조주의는 현상학과 달리 개별 대상에 관심을 두지 않고 그 대상을 둘러싼 구조와 체계에 초점을 맞춘다. 이때 주체의 의식은 중요히 여기지 않는다. 이게 구조주의 비판자들에게서 주로 제기되는 문제이다. 구조언어학에선 언어가 규칙에 따라 지배되는 비 자율적 존재이지만, 사실 실제 언어활동에서 말하는 주체는 상황마다 달리 나타나는 자율적 존재라는 것이다. 결론적으로 구조주의 이후는 후기 구조주의 흐름과 현상학 흐름으로 나뉘었다. 내가 목표로 하던 구조주의의 개괄과 흐름, 기본적인 원리에 대해선 알게 되었다고 생각한다. 전체적으로 간결하고 정확하게 작성되어있다. 구체적 세부 원리에 대해 아주 자세히 나열되어 있지 않아서 그러한지, 이해하기에도 어렵지 않았다. 단순하게는, 현상학과 구조주의에 대해 명쾌하게 설명되어 있다. 물론 모든 문장이 내게 명쾌할 순 없다. 애초에 기반 지식도 부족한 취미 철학러라 나의 순수한 역량 부족인듯. 다만, 구조주의 자체에 대한 특히, 다음 스텝(후기 구조주의나 포스트 모더니즘)의 발판으로 구조주의의 기저가 되는 이론을 살펴보기에 이만한 책이 더 있을까 싶다. 애초에 국내에 구조주의 자체에 대한 저서도 많이 모자란듯 하다.. 특히 일반인을 대상으로 한 것은 더 그렇다. 아주 만족스럽게 읽었고, 기억하면 좋을 것 같은 부분은 노션에 따로 정리도 해뒀지만, 언젠간 다시 한번 열어서 볼 것 같음"
+    review: "최초의 구조주의는 소쉬르의 언어론에서 시작한다고 볼 수 있겠다. 구조주의는 현상학과 달리 개별 대상에 관심을 두지 않고 그 대상을 둘러싼 구조와 체계에 초점을 맞춘다. 이때 주체의 의식은 중요히 여기지 않는다. 이게 구조주의 비판자들에게서 주로 제기되는 문제이다. 구조언어학에선 언어가 규칙에 따라 지배되는 비 자율적 존재이지만, 사실 실제 언어활동에서 말하는 주체는 상황마다 달리 나타나는 자율적 존재라는 것이다. 결론적으로 구조주의 이후는 후기 구조주의 흐름과 현상학 흐름으로 나뉘었다. 내가 목표로 하던 구조주의의 개괄과 흐름, 기본적인 원리에 대해선 알게 되었다고 생각한다. 구조주의 자체에 대한 특히, 다음 스텝(후기 구조주의나 포스트 모더니즘)의 발판으로 구조주의의 기저가 되는 이론을 살펴보기에 적절한 책이라고 생각한다. 애초에 국내에 구조주의 자체에 대한 저서도 많이 모자란듯 하다.. 특히 일반인을 대상으로 한 것은 더 그렇다. 아주 만족스럽게 읽었고, 기억하면 좋을 것 같은 부분은 노션에 따로 정리도 해뒀지만, 언젠간 다시 한번 열어서 봐야할 듯"
   },
   {
     id: 22,
+    access: "private",
     title: '광기의 역사',
     status: 'to-read',
     author: '미셸 푸코',
@@ -243,6 +258,7 @@ export const books = [
   },
   {
     id: 23,
+    access: 'private',
     title: 'ostep',
     status: 'reading',
     author: 'Remzi H.Arpaci-Dusseau , Andrea C. Arpaci-Dusseau',
@@ -253,6 +269,7 @@ export const books = [
   },
   {
     id: 24,
+    access: "public",
     title: '데이터 중심 애플리케이션 설계',
     status: 'reading',
     author: '마틴 클레프만',
@@ -263,6 +280,7 @@ export const books = [
   },
   {
     id: 26,
+    access: "public",
     title: '구의 증명',
     status: 'read',
     author: '최진영',
@@ -275,6 +293,7 @@ export const books = [
   },
   {
     id: 27,
+    access: 'private',
     title: '시지프 신화',
     status: 'reading',
     author: '알베르 카뮈',
@@ -285,6 +304,7 @@ export const books = [
   },
   {
     id: 28,
+    access: "private",
     title: 'CSAPP',
     status: 'to-read',
     author: "Randal E. Bryan , David R. O'Hallaron",
@@ -294,6 +314,7 @@ export const books = [
   },
   {
     id: 29,
+    access: "private",
     title: '컴퓨터 네트워킹 하향식 접근',
     status: 'reading',
     author: 'James F. Kurose, Keith W. Ross',
@@ -304,6 +325,7 @@ export const books = [
   },
   {
     id: 30,
+    access: "private",
     title: '코딩 인터뷰 완전 분석',
     status: 'reading',
     author: '게일 라크만 맥도웰',
@@ -314,6 +336,7 @@ export const books = [
   },
   {
     id: 31,
+    access: "private",
     title: 'JVM 밑바닥까지 파헤치기',
     status: 'reading',
     author: '저우즈밍',
@@ -324,6 +347,7 @@ export const books = [
   },
   {
     id: 32,
+    access: "public",
     title: 'Do it! 딥러닝 입문',
     date: '2025-05-26',
     status: 'read',
@@ -336,6 +360,7 @@ export const books = [
   },
   {
     id: 33,
+    access: "private",
     title: '의지와 표상으로서의 세계',
     date: '2025-08-20',
     status: 'reading',
@@ -347,6 +372,7 @@ export const books = [
   },
   {
     id: 34,
+    access: "private",
     title: '로버트 나이스트롬의 인터프리터 in Java, C',
     date: '2025-08-21',
     status: 'reading',

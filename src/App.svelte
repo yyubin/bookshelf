@@ -123,8 +123,6 @@
         <BookList books={filteredBooks} {viewTitle} />
       {:else if currentView === 'detail'}
         <BookDetail book={selectedBook} />
-      {:else if currentView === 'about'}
-        <About />
       {:else if currentView === 'readingGarden'}
         <ReadingGarden />
       {/if}

@@ -6,10 +6,12 @@
   export let currentView;
   export let selectedTag = null;
 
-  $: tagCounts = books.reduce((acc, b) => {
+  $: publicBooks = books.filter((book) => book.access === 'public');
+  $: tagCounts = publicBooks.reduce((acc, b) => {
     (b.tags ?? []).forEach(t => acc[t] = (acc[t] ?? 0) + 1);
     return acc;
   }, {});
+
   $: tags = Object.entries(tagCounts)
     .sort((a, b) => (b[1] - a[1]) || a[0].localeCompare(b[0]));
 
@@ -32,23 +34,6 @@
     <p class="mt-2 text-gray-400 text-sm leading-relaxed">
       2024년 후반부터의 독서 기록을 아카이빙 합니다.
     </p>
-  </div>
-  
-  <div class="space-y-2 mb-6">
-    <button
-      class="w-full flex items-center justify-between px-4 py-2 rounded-lg transition-colors duration-200
-             hover:bg-gray-700
-             {currentView === 'about' ? 'bg-indigo-600 text-white' : ''}"
-      on:click={() => selectView('about')}
-      aria-current={currentView === 'about' ? 'page' : undefined}
-    >
-      <span class="font-medium">이 사이트에 관해</span>
-      {#if currentView === 'about'}
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg>
-      {/if}
-    </button>
   </div>
 
   <div class="space-y-2 mb-6">
@@ -81,7 +66,7 @@
       aria-current={currentView === 'list' && selectedTag === null ? 'page' : undefined}
     >
       <span class="font-medium">전체</span>
-      <span class="text-xs px-2 py-0.5 rounded-full {currentView === 'list' && selectedTag === null ? 'bg-white/30 text-white' : 'bg-gray-700 text-gray-400'}">{books.length}</span>
+      <span class="text-xs px-2 py-0.5 rounded-full {currentView === 'list' && selectedTag === null ? 'bg-white/30 text-white' : 'bg-gray-700 text-gray-400'}">{publicBooks.length}</span>
     </button>
   </div>
 
