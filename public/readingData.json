@@ -42,11 +42,21 @@
     {
         "date": "2025-08-27",
         "pagesRead": 94,
-        "bookTitle":"데이터 중심 애플리케이션 설계"
+        "bookTitle":"데이터 중심 애플리케이션 설계" 
     },
     {
         "date": "2025-08-27",
         "pagesRead": 48,
         "bookTitle":"로버트 나이스트롬의 인터프리터 in Java, C"
+    },
+    {
+        "date": "2025-08-28",
+        "pagesRead": 92,
+        "bookTitle": "JVM 밑바닥까지 파헤치기"
+    },
+    {
+        "date": "2025-08-28",
+        "pagesRead": 40,
+        "bookTitle": "데이터 중심 애플리케이션 설계"
     }
 ]
