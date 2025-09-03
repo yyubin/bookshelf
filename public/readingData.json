@@ -63,5 +63,10 @@
         "date": "2025-09-02",
         "pagesRead": 50,
         "bookTitle": "노인과 바다"
+    },
+    {
+        "date": "2025-09-03",
+        "pagesRead": 12,
+        "bookTitle": "데이터 중심 애플리케이션 설계"
     }
 ]
