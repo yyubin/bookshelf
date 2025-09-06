@@ -17,8 +17,8 @@ export const books = [
   {
     id: 2,
     access: "public",
-    title: '알베르 카뮈',
-    author: '이방인',
+    title: '이방인',
+    author: '알베르 카뮈',
     status: 'read',
     image: 'https://minumsa.minumsa.com/wp-content/blogs.dir/2/files/bookclub-shop/%EB%8C%80%EC%A7%80-257-500x500.png',
     rating: 5,
@@ -390,6 +390,7 @@ export const books = [
     title: "노인과 바다",
     date: "2025-09-06",
     status: "read",
+    rating: 4,
     author: "어니스트 해밍웨이",
     tags: ['문학'],
     reason: '해밍웨이의 생전 마지막 출간 작품인데, 이게 그의 삶에서 어떤 시사하는 바가 있을 지 궁금했음..',
