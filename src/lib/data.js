@@ -396,5 +396,18 @@ export const books = [
     reason: '해밍웨이의 생전 마지막 출간 작품인데, 이게 그의 삶에서 어떤 시사하는 바가 있을 지 궁금했음..',
     review: '반드시 교훈적으로 작품을 해석하고 싶지는 않기도 하다. 노인은 항해를 통해 원하는 바를 얻었지만 여러 방해(상어들)로 인해 사실 결과론적으론 만족스러워 할 수는 없었다. 이는 해밍웨이가 자신의 작품활동이 불완전한 성공이라고 느끼는 것이 투영된 걸까? 아니면 불완전한 결과를 피할 수 없기에 이를 받아들여야 한다는 걸까? 아니면 그냥 영웅적으로 묘사되는 산티아고를 존경하기만 하면 되는 걸까? 결과 없이 투쟁만으로도 인간의 존엄을 드러낼 수 있다는 건가? ㅋㅋㅋ 사실 다 실존하는 해석이지만 개인적으로 당장 결론을 내리고 싶진 않다. 논지에는 안 맞지만, 과도한 사색과 성찰이 오히려 방향을 흐트러트리거나 성정을 저해하는 면도 있는 것 같아 이런 종류의 생각들을 좀 내려둘 필요도 있는 것 같다. 그래서 이에 대한 음 개인적 결론은 추후에 만들어 볼 듯.',
     image: 'https://image.yes24.com/goods/6157159/XL'
+  },
+  {
+    id: 36,
+    access: "public",
+    title: "Architecture of a Database System",
+    date: "2025-09-08",
+    status: "reading",
+    author: "Joseph M. Hellerstein, Michael Stonebraker and James Hamilton",
+    tags: ['논문', '기술'],
+    reason: 'DDIA 이후 실제 상용 DBMS 시스템의 내부 구현에 대해 자세히 알아보고 싶어서',
+    image: '/ADS.png',
+    reviewLink: 'https://dsf.berkeley.edu/papers/fntdb07-architecture.pdf',
+    reviewSite: '논문 바로가기',
   }
 ];

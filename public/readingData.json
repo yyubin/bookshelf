@@ -73,5 +73,10 @@
         "date": "2025-09-06",
         "pagesRead": 25,
         "bookTitle": "노인과 바다"
+    },
+    {
+        "date": "2025-09-07",
+        "pagesRead": 13,
+        "bookTitle": "Architecture of a Database System"
     }
 ]
