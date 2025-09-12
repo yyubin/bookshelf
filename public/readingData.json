@@ -88,5 +88,10 @@
         "date": "2025-09-10",
         "pagesRead": 49,
         "bookTitle": "시지프 신화"
+    },
+    {
+        "date": "2025-09-12",
+        "pagesRead": 28,
+        "bookTitle": "Architecture of a Database System"
     }
 ]
