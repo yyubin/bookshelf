@@ -49,6 +49,27 @@
   <div class="sm:hidden absolute sticky top-14 left-0 right-0 bg-gray-800 text-gray-200 p-6 z-10 shadow-lg">
 
     <div class="mb-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
+      <h2 class="px-2">메뉴</h2>
+    </div>
+
+    <div class="space-y-2 mb-6">
+      <button
+        class="w-full flex items-center justify-between px-4 py-2 rounded-lg transition-colors duration-200
+              hover:bg-gray-700
+              {currentView === 'diary' ? 'bg-indigo-600 text-white' : ''}"
+        on:click={() => selectView('diary')}
+        aria-current={currentView === 'diary' ? 'page' : undefined}
+      >
+        <span class="font-medium">비하인드</span>
+        {#if currentView === 'diary'}
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+        {/if}
+      </button>
+    </div>
+
+    <div class="mb-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
       <h2 class="px-2">독서 목록</h2>
     </div>
 

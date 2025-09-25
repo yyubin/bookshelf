@@ -5,10 +5,12 @@
   import BookList from './lib/BookList.svelte';
   import BookDetail from './lib/BookDetail.svelte';
   import ReadingGarden from './lib/ReadingGarden.svelte';
+  import DiaryList from './lib/DiaryList.svelte';
+  import DiaryDetail from './lib/DiaryDetail.svelte';
   import About from './About.svelte';
   import { onMount } from 'svelte';
 
-  let currentView = 'list';     // 'list' | 'detail' | 'about'
+  let currentView = 'list';     // 'list' | 'detail' | 'about' | 'diary' | 'diary-detail'
   let selectedTag = null;       // string | null
   let q = '';
   let isDropdownOpen = false;   // Toggle state for mobile dropdown
@@ -16,10 +18,12 @@
   // Routing (detail) related
   let route = { name: 'list', id: null };
   let selectedBook = null;
+  let selectedDiaryId = null;
 
   function parseHash() {
     const h = window.location.hash.slice(1);
     const parts = h.split('/').filter(Boolean);
+
     if (parts[0] === 'book' && parts[1]) {
       const id = Number(parts[1]);
       const found = books.find(b => b.id === id);
@@ -27,14 +31,37 @@
         route = { name: 'detail', id };
         selectedBook = found;
         currentView = 'detail';
-        isDropdownOpen = false; // Close dropdown on navigation
+        isDropdownOpen = false;
         return;
       }
+    } else if (parts[0] === 'diary' && parts[1]) {
+      const id = Number(parts[1]);
+      route = { name: 'diary-detail', id };
+      selectedDiaryId = id;
+      currentView = 'diary-detail';
+      isDropdownOpen = false;
+      return;
     }
+    
+    // Handle views without IDs from hash, like '#/diary'
+    if (h === 'diary') {
+      currentView = 'diary';
+      isDropdownOpen = false;
+      return;
+    }
+    
+    if (h === 'readingGarden') {
+      currentView = 'readingGarden';
+      isDropdownOpen = false;
+      return;
+    }
+
+    // Fallback to default view
     route = { name: 'list', id: null };
     selectedBook = null;
+    selectedDiaryId = null;
     currentView = 'list';
-    isDropdownOpen = false; // Close dropdown on navigation
+    isDropdownOpen = false;
   }
 
   onMount(() => {
@@ -43,15 +70,21 @@
     return () => window.removeEventListener('hashchange', parseHash);
   });
 
-  // Navigation event: view:'list' | 'about'
+  // Navigation event: view:'list' | 'about' | 'diary'
   function handleNavClick(e) {
     const { view, tag } = e.detail;
-    currentView = view;
+    
     selectedTag = tag;
     isDropdownOpen = false; // Close dropdown on nav click
-    if (window.location.hash.startsWith('#/book/')) {
-        window.location.hash = '#';
+    
+    if (view === 'diary') {
+      window.location.hash = 'diary';
+    } else if (view === 'readingGarden') {
+      window.location.hash = 'readingGarden';
+    } else { // 'list'
+      window.location.hash = '';
     }
+    // The hashchange event will trigger parseHash and update the view
   }
 
   // Toggle dropdown for mobile
@@ -125,6 +158,10 @@
         <BookDetail book={selectedBook} />
       {:else if currentView === 'readingGarden'}
         <ReadingGarden />
+      {:else if currentView === 'diary'}
+        <DiaryList />
+      {:else if currentView === 'diary-detail'}
+        <DiaryDetail id={selectedDiaryId} />
       {/if}
     </main>
   </div>
