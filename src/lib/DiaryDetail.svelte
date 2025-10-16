@@ -11,9 +11,9 @@
   async function loadEntry(currentId) {
     const res = await fetch('./diary.json');
     const entries = await res.json();
-    
+
     const currentIndex = entries.findIndex(e => e.id === currentId);
-    
+
     if (currentIndex === -1) {
       entry = null;
       prevEntry = null;
@@ -21,7 +21,22 @@
       return;
     }
 
-    entry = entries[currentIndex];
+    const currentEntry = entries[currentIndex];
+
+    // mdFile 필드가 있으면 해당 파일을 fetch하여 content로 설정
+    if (currentEntry.mdFile) {
+      try {
+        const mdRes = await fetch(currentEntry.mdFile);
+        const mdContent = await mdRes.text();
+        entry = { ...currentEntry, content: mdContent };
+      } catch (error) {
+        console.error('Failed to load markdown file:', error);
+        entry = { ...currentEntry, content: '마크다운 파일을 불러오는데 실패했습니다.' };
+      }
+    } else {
+      entry = currentEntry;
+    }
+
     prevEntry = currentIndex > 0 ? entries[currentIndex - 1] : null;
     nextEntry = currentIndex < entries.length - 1 ? entries[currentIndex + 1] : null;
   }
