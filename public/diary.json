@@ -22,5 +22,21 @@
     "subtitle": "현재 버전에 대한 가치관을 철학 레퍼런스로 분류해보기",
     "tags": ["철학", "잡담"],
     "mdFile": "./diaries/values-diagnosis.md"
+  },
+  {
+    "id": 4,
+    "date": "2025-10-17",
+    "title": "칸트 실천윤리학 생각한 것들 정리",
+    "subtitle": "걍 생각나는대로 정리 해본 것",
+    "tags": ["철학"],
+    "mdFile": "./diaries/kants-practical-ethics-organized.md"
+  },
+  {
+    "id": 5,
+    "date": "2025-10-17",
+    "title": "칸트 실천윤리학 서술형으로 다시 정리",
+    "subtitle": "브런치에 올릴까 말까 고민중",
+    "tags": ["철학"],
+    "mdFile": "./diaries/kants-practical-ethics-post.md"
   }
 ]
