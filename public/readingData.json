@@ -94,9 +94,19 @@
         "pagesRead": 28,
         "bookTitle": "Architecture of a Database System"
     },
-        {
+    {
         "date": "2025-09-12",
         "pagesRead": 26,
         "bookTitle": "Architecture of a Database System"
+    },
+    {
+        "date": "2025-10-16",
+        "pagesRead": 32,
+        "bookTitle": "도덕 형이상학을 위한 기초 놓기"
+    },
+    {
+        "date": "2025-10-16",
+        "pagesRead": 48,
+        "bookTitle": "도덕 형이상학을 위한 기초 놓기"
     }
 ]
