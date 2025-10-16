@@ -22,8 +22,8 @@
   </button>
 
   <div class="bg-white rounded-2xl ring-1 ring-gray-200 overflow-hidden shadow-lg">
-    <div class="grid md:grid-cols-[2fr_3fr] lg:grid-cols-2 gap-4">
-      <div class="relative">
+    <div class="grid md:grid-cols-[300px_1fr] lg:grid-cols-[320px_1fr] gap-4">
+      <div class="relative min-h-[400px] max-h-[500px]">
         <img src={book.image} alt={book.title} class="h-full w-full object-cover rounded-l-2xl" />
         <div class="absolute top-4 left-4">
           <StatusBadge status={book.status} />

@@ -195,6 +195,7 @@ export const books = [
   },
   {
     id: 18,
+    access: "public",
     title: '카라마조프가의 형제들',
     author: '표도르 도스토옙스키',
     status: 'reading',
@@ -362,13 +363,13 @@ export const books = [
   },
   {
     id: 33,
-    access: "private",
+    access: "public",
     title: '의지와 표상으로서의 세계',
     date: '2025-08-20',
-    status: 'reading',
+    status: 'to-read',
     author: '아르투어 쇼펜하우어',
     tags: ['철학'],
-    reason: '예전에 읽으려고 시도하다가, 저자가 서론에서 칸트를 모르면 읽지마라, 그리고 원서로 읽으라고 으름장을.. ㅋㅋㅋ 두셔서 미뤘다. 그렇다고 지금 칸트에 대해서 아주 잘 아는건 아니지만.. 쇼펜하우어의 칸트 비판이 해당 책 부록으로 있어서 그 부분을 읽은 후 다시 도전하는 중',
+    reason: '예전에 읽으려고 시도하다가, 저자가 서론에서 칸트를 모르면 읽지마라, 그리고 원서로 읽으라고 으름장을.. ㅋㅋㅋ 두셔서 미뤘다. 칸트 인식론에 대해 더 공부하고 읽을 예정. 근데 언제쯤 되려나?',
     review: '',
     image: 'https://image.yes24.com/goods/73619945/XL'
   },
