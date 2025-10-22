@@ -118,5 +118,15 @@
         "date": "2025-10-22",
         "pagesRead": 100,
         "bookTitle": "인형의 집"
+    },
+    {
+        "date": "2025-10-23",
+        "pagesRead": 21,
+        "bookTitle": "JVM 밑바닥까지 파헤치기"
+    },
+    {
+        "date": "2025-10-23",
+        "pagesRead": 41,
+        "bookTitle": "구토"
     }
 ]
