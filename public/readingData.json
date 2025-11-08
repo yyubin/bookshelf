@@ -141,7 +141,12 @@
     },
     {
         "date": "2025-11-06",
-        "pagesRead": 62,
+        "pagesRead": 124,
         "bookTitle": "JVM 밑바닥까지 파헤치기" 
+    },
+    {
+        "date": "2025-11-07",
+        "pagesRead": 84,
+        "bookTitle": "구토" 
     }
 ]
