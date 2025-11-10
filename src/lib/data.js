@@ -472,6 +472,6 @@ export const books = [
     tags: ['기술'],
     reason: "밀리에서 구경하다 간단해보여서 읽어봄",
     review: "장점은 간결하고 핵심만 있음. 뭔가 AI로 작성한 느낌이기도 함. 이 정도 개괄이라면 GPT한테 잠깐만 물어도 가능할 듯.. 찾아보니 해당 출판사에서 해당 저자로 온갖 분야의 책을 양산해내고 있음. 실제로 AI로 만드는듯 하다.",
-    image: ""
+    image: "https://image.aladin.co.kr/product/35779/50/cover500/e142635770_1.jpg"
   }  
 ];
