@@ -473,5 +473,20 @@ export const books = [
     reason: "밀리에서 구경하다 간단해보여서 읽어봄",
     review: "장점은 간결하고 핵심만 있음. 뭔가 AI로 작성한 느낌이기도 함. 이 정도 개괄이라면 GPT한테 잠깐만 물어도 가능할 듯.. 찾아보니 해당 출판사에서 해당 저자로 온갖 분야의 책을 양산해내고 있음. 실제로 AI로 만드는듯 하다.",
     image: "https://image.aladin.co.kr/product/35779/50/cover500/e142635770_1.jpg"
+  },  
+  {
+    id: 42,
+    access: "public",
+    title: "CS-PaperSum: A Large-Scale Dataset of AI-Generated Summaries for Scientific Papers",
+    date: "2025-11-11",
+    status: "read",
+    rating: 5,
+    author: "Javin Liu, Aryan Vats, Zihao He",
+    tags: ['기술', '논문'],
+    reason: "대규모 CS 논문 데이터를 AI로 요약한 데이터셋을 만들고, 연구 트렌드 분석까지 한 논문인데, 어떤 논문을 읽을지 메타적 관점에서 보려고 ㅇㅇ",
+    review: "현재 산업 전반에서 이뤄지는 연구 트렌드를 파악하기 좋음. 살펴보면, 데이터 구축 방식과 어떤 논문이 요약됐는지, 현재 트렌드 등을 모두 살펴볼 수 있음. 현재 it 분야의 연구 및 논문 발행 자체가 빠르게 느는데, 이를 ai로 분석한 것이다. 2024까지의 데이터이지만, 내가 잘 모르는 ai 분야에서의 기조를 많이 알 수 있었음. 왜냐하면 최근에 주로 연구되는 분야가 전부 그 분야라서.. 에를 들어 기존 AL/ML에서는 강화학습 및 최적화가 주요 연구 주제 였다면, 요즘은 GNN, 자기지도학습 등이라는 것. 그리고 범용 AI 분야에서는 다중 에이전트나, 자동 계획 들이 전통적 강자였다면 요즘은 윤리적 AI 및, 인간과 AI의 협업 등이 새로운 초점으로 떠오르고 있음. 어떻게 진화하고 있는지 알 수 있음. 확실히 ai가 아주 핫하긴 한듯? 주요 트렌드는 아니지만 시스템아키텍처나 고성능아키텍처 분야에서 인용값이 높긴함. 현재 발전속도로 말미암아 agi나 sgi가 곧 도래할 것이 시기상조일지도 궁금하긴함. 문외한이긴 하지만 agi 이상의 인공지능은 LLM의 형태는 아닐 것 같다.",
+    image: "/cssum.png",
+    reviewLink: 'https://arxiv.org/abs/2502.20582',
+    reviewSite: '논문 바로가기',
   }  
 ];
