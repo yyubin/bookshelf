@@ -38,5 +38,13 @@
     "subtitle": "브런치에 올릴까 말까 고민중",
     "tags": ["철학"],
     "mdFile": "./diaries/kants-practical-ethics-post.md"
+  },
+  {
+    "id": 6,
+    "date": "2025-11-25",
+    "title": "문학적 목표",
+    "subtitle": "메타적 사고의 단점: 내용이 너무 흩어짐",
+    "tags": ["문학", "잡담"],
+    "mdFile": "./diaries/a-humanistic-goal.md"
   }
 ]
