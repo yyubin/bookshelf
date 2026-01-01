@@ -31,7 +31,11 @@
       );
     }
 
-    diaryEntries = filtered;
+    diaryEntries = filtered.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA; // 최신순 (내림차순)
+    });
   })();
 
   function selectTag(tag) {

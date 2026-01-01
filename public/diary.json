@@ -46,5 +46,13 @@
     "subtitle": "메타적 사고의 단점: 내용이 너무 흩어짐",
     "tags": ["문학", "잡담"],
     "mdFile": "./diaries/a-humanistic-goal.md"
+  },
+    {
+    "id": 7,
+    "date": "2026-01-01",
+    "title": "2025 회고 2026 계획",
+    "subtitle": "기본만 하자 기본만",
+    "tags": ["잡담"],
+    "mdFile": "./diaries/2025-retrospect-2026-plan.md"
   }
 ]
