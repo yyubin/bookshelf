@@ -488,5 +488,16 @@ export const books = [
     image: "/cssum.png",
     reviewLink: 'https://arxiv.org/abs/2502.20582',
     reviewSite: '논문 바로가기',
+  },
+  {
+    id: 43,
+    access: "public",
+    title: "데일 카네기 인간관계론",
+    date: "2026-01-06",
+    status: "reading",
+    author: "데일 카네기",
+    tags: ['자기계발'],
+    reason: "통제 불가능하다는 생각으로 타인이나 관계에 대해 접근할 생각이 없었기도 하다. 스스로에게 기본적인 처세술이 없다고는 생각 잘 안했지만 오만했다고 생각한다. 사회적 인간관계에서의 처세술을 알려주는 책이지만, 일종의 심리학처럼 사용해볼 생각보다는 진심으로 자세를 교정하고 싶다.",
+    image: "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791187142560.jpg",
   }  
 ];
