@@ -100,7 +100,7 @@
       return (b.tags ?? []).includes(selectedTag);
     })
     .filter(b => {
-      const hay = (b.title + b.author + (b.review||'') + (b.reason||'') + (b.tags||[]).join(' ')).toLowerCase();
+      const hay = (b.title + b.author + (b.review||'') + (b.reason||'') + (b.tags||[]).join(' ') + (b.memos||[]).join(' ')).toLowerCase();
       return hay.includes(q.trim().toLowerCase());
     });
 
@@ -139,7 +139,7 @@
             <div class="mt-6 relative">
               <input
                 type="search"
-                placeholder="책 제목·작가·감상평·태그로 검색"
+                placeholder="책 제목·작가·감상평·메모·태그로 검색"
                 bind:value={q}
                 class="w-full sm:w-[36rem] rounded-xl bg-gray-700/80 text-gray-200 placeholder-gray-400
                        ring-1 ring-gray-600 focus:ring-2 focus:ring-indigo-500 outline-none px-4 py-3 transition-colors"

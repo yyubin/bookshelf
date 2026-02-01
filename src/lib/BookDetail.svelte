@@ -54,6 +54,19 @@
           </div>
 
           <div>
+            <h2 class="text-base font-semibold text-gray-900">메모</h2>
+            {#if (book.memos ?? []).length}
+              <ul class="mt-2 space-y-1 text-gray-700 list-disc list-inside">
+                {#each book.memos as memo}
+                  <li>{memo}</li>
+                {/each}
+              </ul>
+            {:else}
+              <p class="mt-1 italic text-gray-500">아직 메모가 없습니다.</p>
+            {/if}
+          </div>
+
+          <div>
             <h2 class="text-base font-semibold text-gray-900">선정 이유</h2>
             <p class="mt-1 text-gray-700 leading-relaxed">{book.reason}</p>
           </div>

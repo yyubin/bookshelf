@@ -137,6 +137,19 @@
                 {/if}
               </div>
 
+              <div class="pt-2 border-t border-gray-100">
+                <h4 class="text-sm font-semibold text-gray-900/90 mt-2">메모</h4>
+                {#if (book.memos ?? []).length}
+                  <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                    {#each book.memos.slice(0, 2) as memo}
+                      <li class="line-clamp-1">{memo}</li>
+                    {/each}
+                  </ul>
+                {:else}
+                  <p class="text-sm italic text-gray-500">아직 메모가 없어요.</p>
+                {/if}
+              </div>
+
               <div class="mt-2">
                 <span class="inline-flex items-center gap-1 text-sm font-medium text-indigo-700 hover:text-indigo-900 transition">
                   자세히 보기
