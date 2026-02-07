@@ -3,6 +3,52 @@
   import StatusBadge from './StatusBadge.svelte';
   import TagBadge from './TagBadge.svelte';
   import StarRating from './StarRating.svelte';
+  import { marked } from 'marked';
+
+  const mdFiles = import.meta.glob('./reviews/*.md', { as: 'raw' });
+  const mdIndex = new Map(
+    Object.entries(mdFiles).map(([path, loader]) => [path.split('/').pop(), loader])
+  );
+  let mdHtml = '';
+  let mdLoading = false;
+  let mdError = '';
+  let loadSeq = 0;
+
+  marked.setOptions({ breaks: true });
+
+  async function loadMarkdown(name) {
+    const seq = ++loadSeq;
+    mdLoading = true;
+    mdError = '';
+
+    const loader = mdIndex.get(name);
+    if (!loader) {
+      mdHtml = '';
+      mdError = '감상평 파일을 찾지 못했습니다.';
+      mdLoading = false;
+      return;
+    }
+
+    try {
+      const raw = await loader();
+      if (seq !== loadSeq) return;
+      mdHtml = marked.parse(raw);
+    } catch (err) {
+      if (seq !== loadSeq) return;
+      mdHtml = '';
+      mdError = '감상평을 불러오는 데 실패했습니다.';
+    } finally {
+      if (seq === loadSeq) mdLoading = false;
+    }
+  }
+
+  $: if (book?.reviewMd) {
+    loadMarkdown(book.reviewMd);
+  } else {
+    mdHtml = '';
+    mdLoading = false;
+    mdError = '';
+  }
 
   function goBack() {
     window.history.back();
@@ -46,7 +92,19 @@
         <div class="space-y-4 pt-4 border-t border-gray-100 flex-1">
           <div>
             <h2 class="text-base font-semibold text-gray-900">감상평</h2>
-            {#if book.review?.trim()?.length}
+            {#if book.reviewMd}
+              {#if mdLoading}
+                <p class="mt-1 text-gray-500">감상평을 불러오는 중...</p>
+              {:else if mdHtml?.trim()?.length}
+                <div class="markdown-body mt-2">{@html mdHtml}</div>
+              {:else if book.review?.trim()?.length}
+                <p class="mt-1 text-gray-700 leading-relaxed">{book.review}</p>
+              {:else if mdError}
+                <p class="mt-1 text-rose-600">{mdError}</p>
+              {:else}
+                <p class="mt-1 italic text-gray-500">아직 감상평이 없습니다.</p>
+              {/if}
+            {:else if book.review?.trim()?.length}
               <p class="mt-1 text-gray-700 leading-relaxed">{book.review}</p>
             {:else}
               <p class="mt-1 italic text-gray-500">아직 감상평이 없습니다.</p>
