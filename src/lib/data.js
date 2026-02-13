@@ -564,5 +564,19 @@ export const books = [
     review: "책 구성 자체에 대한 평가를 하자면, 한나 아렌트의 기조가 되는 철학을 전혀 몰라도 읽을 수 있을만큼 쉽게 쓰여있다.",
     reviewMd: "hannah-arendt-eichmann-of-jerusalem.md",
     tags: ["철학"]
-  },    
+  },   
+  {
+    id: 49,
+    access: "public",
+    title: "참을 수 없는 존재의 가벼움",
+    author: "밀란 쿤데라",
+    image: "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788937462344.jpg",
+    date: "2026-02-13",
+    status: "read",
+    rating: 5,
+    reason: "문학애호가들이 해당 작품을 찬양 및 추천하는 리뷰를 여럿봤음. 평소 내가 읽는 작품들이랑도 궤가 달라보여서 호기심으로 읽기 시작",
+    review: "평소에 내가 자주 접하는 작품들과는 확실히 궤가 다른 느낌이었다. 명작임을 알고 본게 맞고, 대충의 스토리도 어느정도는 알고 있었음.",
+    reviewMd: "the-unbearable-lightness-of-being.md",
+    tags: ["문학"]
+  } 
 ];
