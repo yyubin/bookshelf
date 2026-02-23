@@ -578,5 +578,16 @@ export const books = [
     review: "평소에 내가 자주 접하는 작품들과는 확실히 궤가 다른 느낌이었다. 명작임을 알고 본게 맞고, 대충의 스토리도 어느정도는 알고 있었음.",
     reviewMd: "the-unbearable-lightness-of-being.md",
     tags: ["문학"]
-  } 
+  },
+  {
+    id: 50,
+    access: "public",
+    title: "생각에 관한 생각",
+    author: "대니얼 카너먼",
+    image: "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/480D240359440.jpg",
+    date: "2026-02-23",
+    status: "reading",
+    reason: "인간이 이성적으로 사고하고 싶어하지만 직관과 내부 무의식 및 논리에 얼마나 많은 허점이 있는지를 짚어주는 책이다. 무언가를 반드시 생각으로 갈피를 잡아보려고 애쓰는 편인 사람들한텐 절망적일 수도 있겠으나 알아서 나쁘진 않을 듯",
+    tags: ["경제"]
+  }    
 ];
