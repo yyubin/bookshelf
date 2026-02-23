@@ -18,6 +18,19 @@
     dispatch('navClick', { view, tag });
   }
 
+  let tapCount = 0;
+  let tapTimer = null;
+
+  function handleLogoTap() {
+    tapCount++;
+    clearTimeout(tapTimer);
+    tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
+    if (tapCount >= 5) {
+      tapCount = 0;
+      selectView('diary');
+    }
+  }
+
   function toggleDropdown() {
     dispatch('toggleDropdown');
   }
@@ -31,7 +44,7 @@
         <path d="M8 5h8" stroke="currentColor" stroke-width="1.6" />
       </svg>
     </div>
-    <h1 class="text-lg font-bold tracking-tight text-gray-50">비카이브</h1>
+    <h1 class="text-lg font-bold tracking-tight text-gray-50 select-none cursor-default" on:click={handleLogoTap}>비카이브</h1>
   </div>
 
   <button on:click={toggleDropdown} class="text-gray-200 hover:text-white focus:outline-none">

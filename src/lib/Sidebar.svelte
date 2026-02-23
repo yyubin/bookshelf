@@ -6,6 +6,19 @@
   export let currentView;
   export let selectedTag = null;
 
+  let tapCount = 0;
+  let tapTimer = null;
+
+  function handleLogoTap() {
+    tapCount++;
+    clearTimeout(tapTimer);
+    tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
+    if (tapCount >= 5) {
+      tapCount = 0;
+      selectView('diary');
+    }
+  }
+
   $: publicBooks = books.filter((book) => book.access === 'public');
   $: tagCounts = publicBooks.reduce((acc, b) => {
     (b.tags ?? []).forEach(t => acc[t] = (acc[t] ?? 0) + 1);
@@ -29,7 +42,7 @@
           <path d="M8 5h8" stroke="currentColor" stroke-width="1.6" />
         </svg>
       </div>
-      <h1 class="text-xl font-bold tracking-tight text-gray-50">비카이브</h1>
+      <h1 class="text-xl font-bold tracking-tight text-gray-50 select-none cursor-default" on:click={handleLogoTap}>비카이브</h1>
     </div>
     <p class="mt-2 text-gray-400 text-sm leading-relaxed">
       2024년 후반부터의 독서 기록을 아카이빙 합니다.
