@@ -106,13 +106,21 @@
             tabindex="0"
             on:click={() => goDetail(book.id)}
             on:keydown={(e)=> (e.key==='Enter' || e.key===' ') && goDetail(book.id)}
-            class="group bg-white rounded-lg ring-1 ring-gray-200 overflow-hidden hover:shadow-md transition cursor-pointer"
+            class="group rounded-lg overflow-hidden hover:shadow-md transition cursor-pointer
+              {book.featured
+                ? 'bg-amber-50/60 ring-2 ring-amber-400'
+                : 'bg-white ring-1 ring-gray-200'}"
           >
             <div class="relative aspect-w-2 aspect-h-3">
               <img src={book.image} alt={book.title} class="object-cover transition-transform duration-200 group-hover:scale-105" loading="lazy" />
               <div class="absolute top-2 left-2">
                 <StatusBadge status={book.status} />
               </div>
+              {#if book.featured}
+                <div class="absolute top-2 right-2 bg-amber-400 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">
+                  최애
+                </div>
+              {/if}
             </div>
 
             <div class="p-4 space-y-2">

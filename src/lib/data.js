@@ -324,6 +324,7 @@ export const books = [
     title: "데이터 중심 애플리케이션 설계",
     status: "read",
     author: "마틴 클레프만",
+    featured: true,
     image:
       "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791158390983.jpg",
     tags: ["기술"],
@@ -465,6 +466,7 @@ export const books = [
     rating: 5,
     author: "어니스트 해밍웨이",
     tags: ["문학"],
+    featured: true,
     reason:
       "해밍웨이의 생전 마지막 출간 작품인데, 이게 그의 삶에서 어떤 시사하는 바가 있을 지 궁금했음..",
     review:
